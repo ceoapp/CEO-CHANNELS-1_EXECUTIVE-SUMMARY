@@ -52,35 +52,41 @@ const ProfileView: React.FC<ProfileViewProps> = ({ data, onBack }) => {
     <div className="min-h-screen bg-slate-50 animate-fade-in">
       {/* Navigation Bar */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto h-16 flex items-center justify-between">
-          <button 
-            onClick={onBack}
-            className="flex items-center text-slate-500 hover:text-slate-900 transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5 mr-2" />
-            <span className="text-xs font-medium uppercase tracking-wider">Back</span>
-          </button>
+        <div className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto h-16 flex items-center justify-center">
           <div className="font-bold text-slate-900 tracking-tight text-sm md:text-base">
             CEO <span className="text-cyan-600">CHANNELS</span>
           </div>
-          <div className="w-10"></div>
         </div>
       </nav>
 
       {/* Main Content - Single Column */}
-      <main className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto py-12 md:py-20 max-w-3xl">
+      <main className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto py-12 md:py-16 max-w-3xl">
         
         {/* Header Profile */}
-        <header className="mb-12 text-center">
-          <div className="inline-block px-4 py-1.5 mb-6 text-[10px] font-bold tracking-[0.2em] text-cyan-700 uppercase bg-cyan-50 border border-cyan-100 rounded-full">
-            {data.industry}
-          </div>
+        <header className="mb-12 text-center flex flex-col items-center">
+          {/* Back Button (Moved here) */}
+          <button 
+            onClick={onBack}
+            className="mb-8 flex items-center text-slate-400 hover:text-cyan-600 transition-colors uppercase tracking-[0.2em] text-[10px] font-bold group"
+          >
+            <ArrowLeft className="h-3 w-3 mr-1.5 transition-transform group-hover:-translate-x-1" />
+            BACK
+          </button>
+
+          {/* Name */}
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 leading-tight tracking-tight">
             {data.name}
           </h1>
-          <p className="text-xl text-slate-500 font-light mb-8">
+
+          {/* Title/Company */}
+          <p className="text-xl text-slate-500 font-light mb-6">
             {data.title}
           </p>
+
+          {/* Industry Tag (Moved here) */}
+          <div className="inline-block px-4 py-1.5 text-[10px] font-bold tracking-[0.2em] text-cyan-700 uppercase bg-cyan-50 border border-cyan-100 rounded-full">
+            {data.industry}
+          </div>
         </header>
 
         {/* Executive Summary Dashboard (Moved to Top) */}

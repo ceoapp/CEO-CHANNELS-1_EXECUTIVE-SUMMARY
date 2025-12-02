@@ -40,9 +40,14 @@ const responseSchema: Schema = {
 
 export const generateProfile = async (query: string): Promise<CEOProfile> => {
   try {
+    // Robust API Key check to prevent silent crashes
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      throw new Error("API Key is missing. Please check your environment variables in the project settings.");
+    }
+
     // Initialize the client here to ensure process.env.API_KEY is accessible at runtime
-    // and to avoid top-level module evaluation errors.
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: apiKey });
 
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
