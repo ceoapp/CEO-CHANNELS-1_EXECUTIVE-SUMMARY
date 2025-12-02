@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEO CHANNELS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Prompt', 'sans-serif'],
+            },
+            colors: {
+              abyss: '#F8FAFC', // Slate 50 - Light Background
+              glass: '#FFFFFF', // Pure White - Card Surface
+              platinum: '#64748B', // Slate 500 - Secondary Text
+              navy: '#0F172A', // Slate 900 - Primary Text
+              cyan: {
+                400: '#22D3EE',
+                500: '#06B6D4', // Electric Cyan
+                600: '#0891B2',
+              },
+              gold: {
+                400: '#FBBF24',
+                500: '#F59E0B', // Royal Gold
+              }
+            },
+            boxShadow: {
+              'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+              'soft-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02)',
+              'glow': '0 0 15px rgba(6, 182, 212, 0.3)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Prompt', sans-serif;
+        background-color: #F8FAFC;
+        color: #334155;
+      }
+      /* Custom scrollbar for light theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F1F5F9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #CBD5E1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94A3B8; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
