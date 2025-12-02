@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CEOProfile } from '../types';
 import { ArrowLeft, ExternalLink, AlertTriangle, FileQuestion } from 'lucide-react';
@@ -23,7 +22,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ data, onBack }) => {
               <span className="text-xs font-medium uppercase tracking-wider">Back</span>
             </button>
             <div className="font-bold text-slate-900 tracking-tight text-sm md:text-base">
-              CEO <span className="text-cyan-600">CHANNELS</span>
+              CEO <span className="text-cyan-600">EXECUTIVE SUMMARY</span>
             </div>
             <div className="w-10"></div>
           </div>
@@ -54,7 +53,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ data, onBack }) => {
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto h-16 flex items-center justify-center">
           <div className="font-bold text-slate-900 tracking-tight text-sm md:text-base">
-            CEO <span className="text-cyan-600">CHANNELS</span>
+            CEO <span className="text-cyan-600">EXECUTIVE SUMMARY</span>
           </div>
         </div>
       </nav>
@@ -153,7 +152,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ data, onBack }) => {
                   <span className="font-semibold text-slate-600">ขอบเขตความรับผิดชอบ:</span> เนื้อหาทั้งหมด ไม่ใช่คำแนะนำทางการเงิน, การลงทุน, หรือกฎหมาย โปรดอย่าใช้ข้อมูลนี้เป็นพื้นฐานในการตัดสินใจทางธุรกิจที่สำคัญ
                 </li>
                 <li>
-                  <span className="font-semibold text-slate-600">การปฏิเสธความรับผิดชอบ:</span> แพลตฟอร์ม CEO Channels ไม่รับผิดชอบ ต่อความเสียหายหรือความสูญเสียใดๆ ที่เกิดขึ้นจากการอ้างอิงหรือการดำเนินการตามเนื้อหาที่สร้างโดย AI โปรดใช้วิจารณญาณสูงสุดในการรับข้อมูล
+                  <span className="font-semibold text-slate-600">การปฏิเสธความรับผิดชอบ:</span> แพลตฟอร์ม CEO Channels ไม่รับผิดชอบ ต่อความเสียหายหรือความสูญเสียใด ๆ ที่เกิดขึ้นจากการอ้างอิงหรือการดำเนินการตามเนื้อหาที่สร้างโดย AI โปรดใช้วิจารณญาณสูงสุดในการรับข้อมูล
                 </li>
               </ol>
             </div>
