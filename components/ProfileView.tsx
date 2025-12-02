@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { CEOProfile } from '../types';
-import { ArrowLeft, ExternalLink, AlertTriangle, FileQuestion } from 'lucide-react';
+import { ArrowLeft, ExternalLink, FileQuestion } from 'lucide-react';
 
 interface ProfileViewProps {
   data: CEOProfile;
@@ -135,29 +136,6 @@ const ProfileView: React.FC<ProfileViewProps> = ({ data, onBack }) => {
             />
           </section>
         )}
-
-        {/* Disclaimer Section */}
-        <section className="mt-16 mb-12 p-6 bg-slate-50 rounded-xl border border-slate-100">
-          <div className="flex items-start">
-            <AlertTriangle className="h-5 w-5 text-amber-500/80 mr-4 mt-0.5 shrink-0" />
-            <div className="text-xs text-slate-500 space-y-3 font-light leading-relaxed">
-              <p className="font-bold text-slate-700">
-                Disclaimer: เนื้อหาทั้งหมดถูกสร้างและเรียบเรียงโดย Generative AI เป็นการวิเคราะห์และนำเสนอข้อมูลเชิงสังเคราะห์ ไม่ใช่ข้อเท็จจริง ที่ผ่านการตรวจสอบโดยมนุษย์
-              </p>
-              <ol className="list-decimal pl-4 space-y-2">
-                <li>
-                  <span className="font-semibold text-slate-600">ความเสี่ยงด้านข้อมูล:</span> เทคโนโลยีนี้มีข้อจำกัดที่เรียกว่า "Hallucination" ซึ่งอาจนำไปสู่ข้อความที่ผิดพลาดหรือบิดเบือนไปจากความเป็นจริงได้
-                </li>
-                <li>
-                  <span className="font-semibold text-slate-600">ขอบเขตความรับผิดชอบ:</span> เนื้อหาทั้งหมด ไม่ใช่คำแนะนำทางการเงิน, การลงทุน, หรือกฎหมาย โปรดอย่าใช้ข้อมูลนี้เป็นพื้นฐานในการตัดสินใจทางธุรกิจที่สำคัญ
-                </li>
-                <li>
-                  <span className="font-semibold text-slate-600">การปฏิเสธความรับผิดชอบ:</span> แพลตฟอร์ม CEO Channels ไม่รับผิดชอบ ต่อความเสียหายหรือความสูญเสียใด ๆ ที่เกิดขึ้นจากการอ้างอิงหรือการดำเนินการตามเนื้อหาที่สร้างโดย AI โปรดใช้วิจารณญาณสูงสุดในการรับข้อมูล
-                </li>
-              </ol>
-            </div>
-          </div>
-        </section>
 
         {/* References */}
         <footer className="mt-12 pt-10 border-t border-slate-200">
