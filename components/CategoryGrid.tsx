@@ -78,7 +78,7 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ onCategoryClick }) => {
       <h2 className="text-center text-sm font-bold text-slate-400 uppercase tracking-[0.1em] mb-10">
         คลิกที่หมวดหมู่เพื่อค้นคว้าข้อมูล
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {categories.map((cat) => {
           const Icon = IconMap[cat] || LayoutGrid;
           // Get first 3 names for preview (Accessing .name property from object)
