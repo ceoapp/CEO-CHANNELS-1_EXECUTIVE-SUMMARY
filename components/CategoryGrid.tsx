@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Cpu, 
@@ -75,9 +74,6 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ onCategoryClick }) => {
 
   return (
     <div className="w-[90%] md:w-[80%] xl:w-[70%] mx-auto pb-20">
-      <h2 className="text-center text-sm font-bold text-slate-400 uppercase tracking-[0.1em] mb-10">
-        คลิกที่หมวดหมู่เพื่อค้นคว้าข้อมูล
-      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {categories.map((cat) => {
           const Icon = IconMap[cat] || LayoutGrid;

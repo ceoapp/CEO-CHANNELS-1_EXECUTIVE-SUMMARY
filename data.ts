@@ -1,3 +1,4 @@
+
 import { CEOSummary } from './types';
 
 export const CEO_DATA: Record<string, CEOSummary[]> = {
